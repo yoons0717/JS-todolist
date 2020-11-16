@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <script type="text/javascript" src="index.js"></script> 
+    
+    <title>Todolist</title>
+</head>
+<body>
+    <div class="todolist">
+        <section class="nav_bar">
+            <div class="icons">
+                <ul> 
+                    <li><i class="far fa-check-square"></i></li>
+                    <li><button onclick="modalForm()" class="addbtn"><i class="fas fa-plus"></i></button></li>
+                </ul>
+               
+            </div>
+
+        </section>
+        <section class="dept_bar">
+            <div class="title">My Task</div>
+            <ul class="dept">
+                <li class="item">
+                    <a href="#">All Task</a>
+                </li>
+                <li class="item">
+                    <a href="#">Management</a>
+                </li>
+                <li class="item">
+                    <a href="#">Sales</a>
+                </li>
+                <li class="item">
+                    <a href="#">Marketing</a>
+                </li>
+
+            </ul>
+        </section>
+        <section class="list">
+            <h1>Welcome back yoonmi</h1>
+            <div class="container" id="ListContainer">
+              
+            </div>
+        </section>
+    </div>
+   <div id ="formToAddlist" class="modal-form">
+    <div class="modal-content">
+    <form id = "form">   
+        <span onclick = "closeFunc()" class="close">&times;</span>
+        
+      
+        <label for="dept">Department</label>
+        <select id="input_dept" name="input_dept">
+         
+          <option value="Management" selected>Management</option>
+          <option value="Sales">Sales</option>
+          <option value="Marketing">Marketing</option>
+        
+        </select>
+        <label for="content">Content</label>
+        <input type="textarea" id="input_content"placeholder="Write..">
+    
+        <input type="submit" value="Submit" onclick="SubmitForm()">
+    </form>
+</div>
+   </div>
+</body>
+</html>

@@ -1,0 +1,171 @@
+:root {
+  /* color */
+  --white-color: #fff;
+  --black-color: #140a00;
+  --blue-dark-color: #1665d8;
+  --blue-light-color: #e3eaf5;
+  --grey-dark-color: #909090;
+  --grey-light-color: #edeef2;
+  --navy-color: #172b4d;
+  /* Size */
+  --padding: 24px;
+  --margin: 12px;
+  --avatar-size: 36px;
+
+  /* Font Size */
+  --font-large: 18px;
+  --font-medium: 14px;
+  --font-small: 12px;
+  --font-micro: 10px;
+}
+
+* {
+  font-family: Consolas, sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+button,
+button:focus {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  background-color: var(--white-color);
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: var(--grey-light-color);
+  padding: var(--padding);
+}
+
+ul {
+  list-style-type: none;
+}
+/* 전체적인 레이아웃 */
+.todolist {
+  display: flex;
+}
+
+.nav_bar:nth-child(1) {
+  flex-shrink: 0;
+  width: 100px;
+}
+.dept_bar:nth-child(2) {
+  flex-shrink: 0;
+  width: 200px;
+}
+
+.list:nth-child(3) {
+  flex-grow: 1;
+}
+
+/*  세부 디자인 */
+
+/* navbar */
+.todolist .nav_bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--blue-dark-color);
+}
+.todolist .nav_bar i {
+  color: var(--white-color);
+  font-size: 50px;
+}
+.todolist .nav_bar .icons .addbtn {
+  background-color: var(--blue-dark-color);
+}
+/* dept bar */
+.todolist .dept_bar {
+  background-color: var(--blue-light-color);
+}
+
+.todolist .dept_bar a {
+  color: var(--navy-color);
+}
+.todolist .dept_bar .title {
+  font-size: x-large;
+  margin: var(--margin);
+  padding: var(--padding) 0 var(--padding) 0;
+  font-weight: bold;
+}
+.todolist .dept_bar .dept li {
+  font-size: var(--font-medium);
+  margin: var(--margin);
+  padding: var(--margin) 0 var(--margin) 0;
+}
+
+/* list  */
+.todolist .list {
+  padding: var(--padding);
+  background-color: #f6f7f8;
+}
+.list h1 {
+  margin-bottom: var(--padding);
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 150px 150px 150px 150px;
+
+  gap: 10px;
+  align-items: stretch;
+}
+.container .item {
+  background-color: var(--white-color);
+  padding: var(--margin);
+}
+
+.container .item i {
+  color: var(--grey-dark-color);
+}
+
+/* modal form */
+.modal-form {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+.modal-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: var(--padding);
+  border: 1px solid #888;
+  width: 300px;
+}
+.modal-content input {
+  margin: var(--margin) 0 var(--margin) 0;
+}
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
